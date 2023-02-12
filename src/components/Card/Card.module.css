@@ -1,0 +1,63 @@
+.card{
+   border:1px solid white;
+    width:20rem;
+    height:10rem;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.3);
+   background-color: rgba(228, 173, 89, 0.3);
+   
+}
+.card:hover{
+  animation-name:hover_animation;
+    animation-timing-function: ease;
+    animation-duration: 3s;
+}
+.name{
+  width:90%;
+  height:90%;
+  display: flex;
+ align-items: center;
+ margin: 0 auto;
+ justify-content: center;
+}
+
+.picked{
+     border:1px solid; 
+    width:20rem;
+    height:10rem;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+     background-color: brown;
+     color: white;
+}
+
+@keyframes hover_animation {
+    100%{
+        transform: scale(1.1);
+        background-color: brown;
+        color: white;
+    }
+    
+}
+
+@media (max-width:576px){
+    .card{
+  
+    width:10rem;
+    height:5rem;
+    font-size: 25px;
+   
+}
+.picked{
+  width:10rem;
+    height:5rem;
+    font-size: 25px;
+}
+}

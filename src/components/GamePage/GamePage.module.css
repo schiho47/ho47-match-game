@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width:80%;
+    margin: 0 auto;
+    margin-top: 3rem;
+    min-height: 100vh;
+}
+
+@media (max-width:576px){.container{width: 100%;}}
