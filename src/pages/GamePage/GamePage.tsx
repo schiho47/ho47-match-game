@@ -1,8 +1,14 @@
 import { useEffect, useState } from "react";
 import { game1, game1Type } from "../../data/game";
-import Card from "../Card/Card";
+import Card from "../../components/Card/Card";
 import styles from "./GamePage.module.css";
-const GamePage = () => {
+import Button from "../../components/Button/Button";
+import { Link } from "react-router-dom";
+import Header from "../../components/Header/Header";
+interface GamePageProps {
+  type: string;
+}
+const GamePage: React.FC<GamePageProps> = ({ type }) => {
   const [matchGroup, setMatchGroup] = useState<
     { name: string; answer: string }[]
   >([]);
@@ -42,18 +48,27 @@ const GamePage = () => {
 
   return (
     <div>
+      <Header />
       <div className={styles.rule}>
         遊戲規則：請選出與人名有關聯的相對應詞彙
+        <div className={styles.btn}>
+          <Link to="/" className="link">
+            <Button title={"回上一頁"} size="small" />
+          </Link>
+        </div>
       </div>
-      {gameData.filter((data: game1Type) => data.active === true).length ===
-        0 && (
-        <div>
-          <h1>恭喜破關!</h1>
+      {gameData.filter(
+        (data: game1Type) => data.type === type && data.active === true
+      ).length === 0 && (
+        <div className={styles.success}>
+          <h1>恭喜破關! 👍讃</h1>
         </div>
       )}
       <div className={styles.cardContainer}>
         {gameData
-          .filter((data: game1Type) => data.active === true)
+          .filter(
+            (data: game1Type) => data.type === type && data.active === true
+          )
           .map((card: game1Type) => {
             return (
               <Card
