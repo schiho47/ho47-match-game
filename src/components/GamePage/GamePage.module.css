@@ -1,4 +1,11 @@
-.container{
+.rule{
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 3rem;
+    margin-top: 2rem;
+    width:80%;
+}
+.cardContainer{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -8,4 +15,4 @@
     min-height: 100vh;
 }
 
-@media (max-width:576px){.container{width: 100%;}}
+@media (max-width:576px){.cardContainer{width: 100%;}}

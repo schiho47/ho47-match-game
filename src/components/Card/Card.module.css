@@ -49,15 +49,16 @@
 
 @media (max-width:576px){
     .card{
-  
     width:10rem;
     height:5rem;
-    font-size: 25px;
-   
+    font-size: 25px;   
+  }
+  .card:hover{
+  animation-name:none;
 }
-.picked{
-  width:10rem;
-    height:5rem;
-    font-size: 25px;
-}
+  .picked{
+    width:10rem;
+      height:5rem;
+      font-size: 25px;
+  }
 }

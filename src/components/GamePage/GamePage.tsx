@@ -41,31 +41,36 @@ const GamePage = () => {
   }, [matchGroup]);
 
   return (
-    <div className={styles.container}>
+    <div>
+      <div className={styles.rule}>
+        遊戲規則：請選出與人名有關聯的相對應詞彙
+      </div>
       {gameData.filter((data: game1Type) => data.active === true).length ===
         0 && (
         <div>
           <h1>恭喜破關!</h1>
         </div>
       )}
-      {gameData
-        .filter((data: game1Type) => data.active === true)
-        .map((card: game1Type) => {
-          return (
-            <Card
-              name={card.name}
-              answer={card.answer}
-              id={card.id}
-              key={card.id}
-              onClick={() => handlePickAnswer(card.name, card.answer)}
-              isPicked={
-                matchGroup.length > 0 && card.name === matchGroup[0].name
-                  ? true
-                  : false
-              }
-            />
-          );
-        })}
+      <div className={styles.cardContainer}>
+        {gameData
+          .filter((data: game1Type) => data.active === true)
+          .map((card: game1Type) => {
+            return (
+              <Card
+                name={card.name}
+                answer={card.answer}
+                id={card.id}
+                key={card.id}
+                onClick={() => handlePickAnswer(card.name, card.answer)}
+                isPicked={
+                  matchGroup.length > 0 && card.name === matchGroup[0].name
+                    ? true
+                    : false
+                }
+              />
+            );
+          })}
+      </div>
     </div>
   );
 };
