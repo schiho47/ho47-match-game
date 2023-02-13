@@ -23,3 +23,9 @@
     text-align: center;
     cursor: pointer;
 }
+@media (max-width:576px){
+    .large{
+        width:auto;
+        font-size: 20px;
+    }
+}

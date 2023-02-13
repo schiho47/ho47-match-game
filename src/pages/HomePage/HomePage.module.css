@@ -16,7 +16,14 @@
     flex-wrap: wrap;
 }
 @media (max-width:576px){
+    .container{
+        height:auto;
+    }
     .main{
-    width:55%;
+        width:90%;
+        padding: 10px;
+       /* position: absolute;
+        left:25%;
+        top:20%; */
     }
 }
