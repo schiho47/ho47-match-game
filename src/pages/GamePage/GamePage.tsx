@@ -50,7 +50,11 @@ const GamePage: React.FC<GamePageProps> = ({ type }) => {
     <div>
       <Header />
       <div className={styles.rule}>
-        遊戲規則：請選出與人名有關聯的相對應詞彙
+        <h4>
+          遊戲規則： 請先選一個詞彙後，於頁面尋找有關連的對應詞彙。
+          <br />
+          例：Ho47-本遊戲作者
+        </h4>
         <div className={styles.btn}>
           <Link to="/" className="link">
             <Button title={"回上一頁"} size="small" />
