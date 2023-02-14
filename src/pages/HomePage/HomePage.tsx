@@ -10,7 +10,7 @@ const HomePage = () => {
     // { title: "藝術", type: Type.Art },
     { title: "音樂", type: Type.Music },
     { title: "政治", type: Type.Politics },
-    { title: "白色恐佈", type: Type.WhiteTerror },
+    { title: "白色恐怖", type: Type.WhiteTerror },
     { title: "棒球", type: Type.CPBL },
   ];
 
