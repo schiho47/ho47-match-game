@@ -1,0 +1,30 @@
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+}
+.title {
+  margin-left: 3rem;
+  color: black;
+}
+.main {
+  margin: 4rem auto;
+  margin-bottom: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 85%;
+  display: flex;
+}
+@media (max-width: 576px) {
+  .container {
+    height: 100vh;
+    overflow: hidden;
+  }
+  .main {
+    width: 90%;
+    padding: 10px;
+    /* position: absolute;
+        left:25%;
+        top:20%; */
+  }
+}

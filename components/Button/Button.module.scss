@@ -1,0 +1,31 @@
+.large{
+    border:1px solid;
+    width:10rem;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.small{
+    border:1px solid;
+    width:6rem;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: brown;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+}
+@media (max-width:576px){
+    .large{
+        width:auto;
+        font-size: 20px;
+    }
+}

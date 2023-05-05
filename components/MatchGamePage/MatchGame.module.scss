@@ -1,0 +1,35 @@
+
+.cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  margin-top: 3rem;
+  min-height: 100vh;
+  padding: 0 10rem;
+  // background-image: url("/assets/index/old_map_background.png");
+}
+.success {
+  width: 100%;
+  margin: 0 auto;
+  margin-top: 3rem;
+  min-height: 80vh;
+  text-align: center;
+  div{
+    margin: 0 auto;
+    margin-top: 3rem;
+  }
+}
+.btn {
+  margin-top: 3rem;
+}
+
+@media (max-width: 576px) {
+  .cardContainer {
+    width: 100%;
+  }
+  .rule {
+    display: block;
+    width: 80%;
+  }
+}
