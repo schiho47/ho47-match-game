@@ -10,5 +10,6 @@ export interface ClassLineType{
   name:string;
   title:string;
   src:string;
+  explain:string;
   note:string;
 }

@@ -1,13 +1,24 @@
-import styles from "./Button.module.scss";
+import styles from './Button.module.scss';
 interface ButtonProps {
   title: string;
-  size: "large" | "small";
-  onClick?:()=>void;
+  size: 'large' | 'small';
+  onClick?: () => void;
+  type?: 'primary' | 'normal';
 }
 
-const Button: React.FC<ButtonProps> = ({ title, size, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  title,
+  size,
+  onClick,
+  type = 'primary',
+}) => {
   return (
-    <div className={size === "large" ? `${styles.large}` : `${styles.small}`} onClick={onClick}>
+    <div
+      className={`${styles.basicButton} ${
+        size === 'large' ? `${styles.large}` : `${styles.small}`
+      } ${styles[type]}`}
+      onClick={onClick}
+    >
       {title}
     </div>
   );
